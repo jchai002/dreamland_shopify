@@ -272,7 +272,24 @@
       "announcement": "Announcement",
       "announcement_bar": "Announcement bar"
     },
-
+    "footer_contact": {
+      "heading": "Interested In a New Mattress? Let's Get In Touch!",
+      "sf_bay_area": "SF Bay Area",
+      "hours": "hours:",
+      "hours_weekday": "Mon-Fri 9:00am-5:00pm",
+      "hours_weekend": "Sat-Sun By Appointments Only",
+      "phone": "phone:",
+      "fax": "fax:",
+      "email": "email:",
+      "wechat": "wechat:",
+      "rednote": "rednote:",
+      "seattle": "Seattle",
+      "by_appointment": "By Appointments Only",
+      "address": "Address:",
+      "nj_ny": "New Jersey / New York",
+      "phone_text_only": "phone (text only):",
+      "email_text": "email: text message"
+    },
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",

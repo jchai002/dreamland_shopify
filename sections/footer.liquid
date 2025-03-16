@@ -15,6 +15,48 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .footer-block__contact {
+    margin-bottom: 3rem;
+  }
+
+  .footer-contact__location {
+    margin-bottom: 2rem;
+  }
+
+  .footer-contact__location h3 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .footer-contact__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-contact__column {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .footer-contact__column svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+
+  .footer-contact__column div p {
+    margin: 0 0 0.5rem 0;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid rgba(var(--color-foreground), 0.1);
+    margin: 2rem 0;
+  }
+
   @media screen and (min-width: 750px) {
     .footer {
       margin-top: {{ section.settings.margin_top }}px;
@@ -23,6 +65,10 @@
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .footer-contact__grid {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 {%- endstyle -%}
@@ -38,12 +84,12 @@
       assign brand_empty = true
     endif
 
-    if section.blocks.size == 1 and section.blocks[0].type == 'brand_information' and brand_empty and has_social_icons == false and section.settings.newsletter_enable == false and section.settings.enable_follow_on_shop == false
+    if section.blocks.size == 1 and section.blocks[0].type == 'brand_information' and brand_empty and has_social_icons == false and section.settings.contact_enable == false and section.settings.enable_follow_on_shop == false
       assign only_empty_brand = true
     endif
   -%}
   {%- if section.blocks.size > 0
-    or section.settings.newsletter_enable
+    or section.settings.contact_enable
     or section.settings.show_social
     and has_social_icons == true
     or section.settings.enable_follow_on_shop
@@ -160,79 +206,108 @@
         {%- endif -%}
 
         <div
-          class="footer-block--newsletter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="footer-block--contact{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
           {% endif %}
         >
-          {%- if section.settings.newsletter_enable -%}
-            <div class="footer-block__newsletter">
-              {%- if section.settings.newsletter_heading != blank -%}
-                <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
-              {%- endif -%}
-              {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-                <input type="hidden" name="contact[tags]" value="newsletter">
-                <div class="newsletter-form__field-wrapper">
-                  <div class="field">
-                    <input
-                      id="NewsletterForm--{{ section.id }}"
-                      type="email"
-                      name="contact[email]"
-                      class="field__input"
-                      value="{{ form.email }}"
-                      aria-required="true"
-                      autocorrect="off"
-                      autocapitalize="off"
-                      autocomplete="email"
-                      {% if form.errors %}
-                        autofocus
-                        aria-invalid="true"
-                        aria-describedby="ContactFooter-error"
-                      {% elsif form.posted_successfully? %}
-                        aria-describedby="ContactFooter-success"
-                      {% endif %}
-                      placeholder="{{ 'newsletter.label' | t }}"
-                      required
-                    >
-                    <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                      {{ 'newsletter.label' | t }}
-                    </label>
-                    <button
-                      type="submit"
-                      class="newsletter-form__button field__button"
-                      name="commit"
-                      id="Subscribe"
-                      aria-label="{{ 'newsletter.button_label' | t }}"
-                    >
-                      <span class="svg-wrapper">
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
-                      </span>
-                    </button>
+          {%- if section.settings.contact_enable -%}
+            <div class="footer-block__contact">
+              <h2 class="footer-block__heading">{{ 'sections.footer_contact.heading' | t }}</h2>
+
+              <div class="footer-contact__location">
+                <h3>{{ 'sections.footer_contact.sf_bay_area' | t }}</h3>
+                <div class="footer-contact__grid">
+                  <div class="footer-contact__column">
+                    <div>
+                      <p>{{ 'sections.footer_contact.hours' | t }}</p>
+                      <p>{{ 'sections.footer_contact.hours_weekday' | t }}</p>
+                      <p>{{ 'sections.footer_contact.hours_weekend' | t }}</p>
+                      <p>{{ 'sections.footer_contact.address' | t }} 2012 Farallon Drive, San Leandro, CA 94577</p>
+                    </div>
                   </div>
-                  {%- if form.errors -%}
-                    <small class="newsletter-form__message form__message" id="ContactFooter-error">
-                      <span class="svg-wrapper">
-                        {{- 'icon-error.svg' | inline_asset_content -}}
-                      </span>
-                      {{- form.errors.translated_fields.email | capitalize }}
-                      {{ form.errors.messages.email -}}
-                    </small>
-                  {%- endif -%}
+                  <div class="footer-contact__column">
+                    <div>
+                      <p>
+                        {{ 'sections.footer_contact.phone' | t }}
+                        <a href="tel:5103645825">(510)364-5825</a>
+                      </p>
+                      <p>{{ 'sections.footer_contact.fax' | t }} (510)483-2867</p>
+                      <p>{{ 'sections.footer_contact.wechat' | t }} wx453428399</p>
+                      <p>{{ 'sections.footer_contact.rednote' | t }} 554327955</p>
+                    </div>
+                  </div>
+                  <div class="footer-contact__column">
+                    <div>
+                      <p>
+                        {{ 'sections.footer_contact.email' | t }}
+                        <a href="mailto:zfx63@hotmail.com">zfx63@hotmail.com</a>
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                {%- if form.posted_successfully? -%}
-                  <h3
-                    class="newsletter-form__message newsletter-form__message--success form__message"
-                    id="ContactFooter-success"
-                    tabindex="-1"
-                    autofocus
-                  >
-                    <span class="svg-wrapper">
-                      {{- 'icon-success.svg' | inline_asset_content -}}
-                    </span>
-                    {{- 'newsletter.success' | t }}
-                  </h3>
-                {%- endif -%}
-              {%- endform -%}
+              </div>
+
+              <hr>
+
+              <div class="footer-contact__location">
+                <h3>{{ 'sections.footer_contact.seattle' | t }}</h3>
+                <div class="footer-contact__grid">
+                  <div class="footer-contact__column">
+                    <div>
+                      <p>{{ 'sections.footer_contact.by_appointment' | t }}</p>
+                      <p>{{ 'sections.footer_contact.address' | t }} 6912 149th Ave NE, Redmond, WA 98052</p>
+                    </div>
+                  </div>
+                  <div class="footer-contact__column">
+                    <div>
+                      <p>
+                        {{ 'sections.footer_contact.phone' | t }}
+                        <a href="tel:9252905869">925-290-5869</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="footer-contact__column">
+                    <div>
+                      <p>{{ 'sections.footer_contact.wechat' | t }} Hayley12</p>
+                      <p>{{ 'sections.footer_contact.rednote' | t }} 955430333</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="footer-contact__location">
+                <h3>{{ 'sections.footer_contact.nj_ny' | t }}</h3>
+                <div class="footer-contact__grid">
+                  <div class="footer-contact__column">
+                    <div>
+                      <p>{{ 'sections.footer_contact.by_appointment' | t }}</p>
+                      <p>{{ 'sections.footer_contact.address' | t }} 7W Main St F1R1, Bound Brook, NJ 08805</p>
+                    </div>
+                  </div>
+                  <div class="footer-contact__column">
+                    <div>
+                      <p>
+                        {{ 'sections.footer_contact.phone_text_only' | t }}
+                        <a href="tel:9085668030">908-566-8030</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="footer-contact__column">
+                    <div>
+                      <p>{{ 'sections.footer_contact.email_text' | t }}</p>
+                      <p>{{ 'sections.footer_contact.wechat' | t }} wx453428399</p>
+                      <p>{{ 'sections.footer_contact.rednote' | t }} 841456629</p>
+                      <p>
+                        {{ 'sections.footer_contact.email' | t }}
+                        <a href="mailto:mayan15416@gmail.com">mayan15416@gmail.com</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           {%- endif -%}
 
@@ -437,33 +512,13 @@
     },
     {
       "type": "checkbox",
-      "id": "newsletter_enable",
+      "id": "contact_enable",
       "default": true,
-      "label": "t:sections.footer.settings.newsletter_enable.label"
-    },
-    {
-      "type": "inline_richtext",
-      "id": "newsletter_heading",
-      "default": "t:sections.footer.settings.newsletter_heading.default",
-      "label": "t:sections.footer.settings.newsletter_heading.label"
+      "label": "Enable contact information"
     },
     {
       "type": "header",
       "content": "t:sections.footer.settings.header__9.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_follow_on_shop",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_follow_on_shop.label",
-      "info": "t:sections.footer.settings.enable_follow_on_shop.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_social",
-      "default": true,
-      "label": "t:sections.footer.settings.show_social.label",
-      "info": "t:sections.footer.settings.show_social.info"
     },
     {
       "type": "checkbox",
@@ -491,6 +546,24 @@
       "default": true,
       "label": "t:sections.footer.settings.show_policy.label",
       "info": "t:sections.footer.settings.show_policy.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__9.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_follow_on_shop",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_follow_on_shop.label",
+      "info": "t:sections.footer.settings.enable_follow_on_shop.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "default": true,
+      "label": "t:sections.footer.settings.show_social.label",
+      "info": "t:sections.footer.settings.show_social.info"
     },
     {
       "type": "header",

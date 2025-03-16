@@ -273,6 +273,24 @@
         "other": "{{ count }} 件产品"
       }
     },
+    "footer_contact": {
+      "heading": "想要新床垫吗? 来联系我们!",
+      "sf_bay_area": "旧金山湾区",
+      "hours": "时间:",
+      "hours_weekday": "周一到五 9:00am-5:00pm",
+      "hours_weekend": "周末需要电话预约",
+      "phone": "电话：",
+      "fax": "传真：",
+      "email": "邮件：",
+      "wechat": "微信:",
+      "rednote": "小红书:",
+      "seattle": "西雅图",
+      "by_appointment": "仅接受预约",
+      "address": "地址:",
+      "nj_ny": "新泽西 / 纽约",
+      "phone_text_only": "电话 (仅限短信):",
+      "email_text": "电子邮件: 短信联系"
+    },
     "cart": {
       "title": "您的购物车",
       "caption": "购物车商品",
