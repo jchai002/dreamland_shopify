@@ -157,14 +157,37 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_gJiggV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BTTxF7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Products Come in 3 Different Flavours",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BTTxF7"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Firm",
+            "text": "<p>This category is for someone who prefers mattresses that are just a bit more firm than those found in American Stores. Mattresses in this category are: <a href=\"/products/jade\" title=\"Jade\">Jade </a>and <a href=\"/products/anna\" title=\"Anna\">Anna</a>.</p>",
             "link_label": "",
             "link": ""
           }
@@ -172,8 +195,8 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Extra Firm",
+            "text": "<p>The extra firm category include <a href=\"/products/hotstone\" title=\"Hotstone\">Hotstone </a>and <a href=\"/products/ruby\" title=\"Ruby\">Ruby</a>. Most of our customers prefer this level of firmness.</p>",
             "link_label": "",
             "link": ""
           }
@@ -217,6 +240,7 @@
     "rich_text",
     "collage",
     "video",
+    "rich_text_gJiggV",
     "multicolumn"
   ]
 }
