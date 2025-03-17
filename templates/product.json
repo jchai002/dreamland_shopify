@@ -37,7 +37,8 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "button",
+            "swatch_shape": "circle"
           }
         },
         "quantity_selector": {
@@ -60,7 +61,7 @@
           "settings": {
             "heading": "Materials",
             "icon": "leather",
-            "content": "",
+            "content": "<p><strong>Comfort Layer:</strong> High-density polyurethane foam for pressure relief.</p><p><strong>Support Layer:</strong> Individually wrapped steel coils for motion isolation.</p><p><strong>Edge Support:</strong> Reinforced perimeter coils for enhanced edge stability.</p><p><strong>Quilted Cover:</strong> Breathable fabric blend (cotton/polyester) with hypoallergenic treatment.</p><p><strong>Fire Barrier:</strong> Non-toxic, fiberglass-free flame retardant layer.</p><p><strong>Base Layer:</strong> Durable support foam for stability.</p>",
             "page": ""
           }
         },
@@ -69,7 +70,7 @@
           "settings": {
             "heading": "Shipping & Returns",
             "icon": "truck",
-            "content": "",
+            "content": "<h4><strong>Shipping</strong></h4><p><strong>Delivery Time:</strong> Orders ship within 5-7 business days.</p><p><strong>Shipping Cost:</strong> Calculated at checkout based on location.</p><p><strong>Local Pickup:</strong> Available at our San Leandro warehouse.</p><p><strong>Restricted Delivery Areas:</strong> We do not ship to Alaska, Hawaii, or PO boxes.</p><h4><strong>Returns & Refunds</strong></h4><p>We want you to love your Dreamland mattress, but if you’re not satisfied, here’s our policy:</p><h5><strong>30-Night Adjustment Period & 100-Day Return Window</strong></h5><p><strong>Try your mattress for at least 30 nights before requesting a return.</strong> Adjusting to a new mattress takes time, and most customers find they love their Dreamland mattress after the adjustment period.</p><p><strong>Returns must be requested within 100 days of delivery.</strong> No returns will be accepted after 100 days.</p><p><strong>Eligibility:</strong> Only two mattress purchases per household are eligible for return.</p><p><strong>Condition:</strong> Mattress must be clean and undamaged—no stains, rips, or broken components.</p><h5><strong>Return Process</strong></h5><p><strong>Within 50 Miles of San Leandro, CA:</strong> Our warehouse team will pick up your mattress. Contact us at <strong>510-364-5825</strong> to arrange pickup.</p><p><strong>Outside 50-Mile Radius:</strong> You must donate your mattress to a verified charity (e.g., Salvation Army, Goodwill, shelters) and provide a donation receipt with a photo.</p><h5><strong>Refunds</strong></h5><p><strong>Returns within our pickup area:</strong> Full refund after pickup and inspection.</p><p><strong>Returns outside our pickup area:</strong> Refund of <strong>80% of the purchase price</strong> after donation proof.</p><p><strong>Non-Refundable Items:</strong> Adjustable bases, foundations, and accessories.</p>",
             "page": ""
           }
         },
@@ -78,7 +79,7 @@
           "settings": {
             "heading": "Dimensions",
             "icon": "ruler",
-            "content": "",
+            "content": "<p><strong>Twin:</strong> 38\" x 75\"</p><p><strong>Twin XL:</strong> 38\" x 80\"</p><p><strong>Full (Double):</strong> 54\" x 75\"</p><p><strong>Queen:</strong> 60\" x 80\"</p><p><strong>King (Eastern King - EK):</strong> 76\" x 80\"</p><p><strong>California King (CK):</strong> 72\" x 84\"</p>",
             "page": ""
           }
         },
@@ -87,7 +88,7 @@
           "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
-            "content": "",
+            "content": "<p><strong>Use a Mattress Protector:</strong> Prevent spills, stains, and dust buildup.</p><p><strong>Rotate Every 3-6 Months:</strong> Helps even out wear and extend lifespan.</p><p><strong>Keep It on a Solid Base:</strong> Use a firm, supportive foundation.</p><p><strong>Spot Clean Only:</strong> Mild soap and water; avoid soaking.</p><p><strong>Ventilate Regularly:</strong> Let fresh air in to prevent moisture buildup.</p><p><strong>Do Not Fold or Bend:</strong> Can damage internal coil structure.</p>",
             "page": ""
           }
         },
@@ -115,10 +116,14 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "color_scheme": "",
         "media_size": "large",
         "constrain_to_viewport": true,
+        "media_fit": "contain",
         "gallery_layout": "stacked",
         "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
@@ -151,10 +156,12 @@
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
+        "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
+        "section_color_scheme": "",
         "color_scheme": "scheme-2",
         "padding_top": 36,
         "padding_bottom": 36
@@ -208,10 +215,12 @@
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
+        "products_to_show": 4,
         "columns_desktop": 4,
         "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
