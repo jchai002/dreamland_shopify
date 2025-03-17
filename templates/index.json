@@ -205,7 +205,7 @@
           "type": "column",
           "settings": {
             "title": "Extra Firm Plus",
-            "text": "<p>This category include <a href=\"https://www.sleepdreamland.com/products/coconut\">Coconut</a> and <a href=\"https://www.sleepdreamland.com/products/cocospring\">CocoSpring</a>. Some of our extra firm plus contain coconut fiber, and are comparable in firmness to the wood board beds typically found in China</p>",
+            "text": "<p>This category include <a href=\"/products/coconut\" title=\"Coconut\">Coconut </a>and <a href=\"/products/cocospring\" title=\"CocoSpring\">CocoSpring</a>. Some of our extra firm plus contain coconut fiber, and are comparable in firmness to the wood board beds typically found in China</p>",
             "link_label": "",
             "link": ""
           }
