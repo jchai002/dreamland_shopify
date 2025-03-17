@@ -19,25 +19,17 @@
             "heading_size": "h0"
           }
         },
-        "subheading": {
+        "text": {
           "type": "text",
           "settings": {
             "text": "Your one stop for firm mattresses in the Bay Area",
-            "text_style": "body"
-          }
-        },
-        "cta_text": {
-          "type": "text",
-          "settings": {
-            "text": "Visit our warehouse at: 2012 Farallon Drive, San Leandro, CA 94577",
             "text_style": "body"
           }
         }
       },
       "block_order": [
         "heading",
-        "subheading",
-        "cta_text"
+        "text"
       ],
       "settings": {
         "image_overlay_opacity": 40,
