@@ -1,0 +1,35 @@
+{% comment %}
+  Smooth scrolling functionality for internal links
+  Usage: Include this in theme.liquid to enable smooth scrolling for anchor links
+{% endcomment %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Find all links that hash links (start with #)
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
+    
+    internalLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        // Get the target element
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        // If target element exists, scroll to it
+        if (targetElement) {
+          e.preventDefault();
+          
+          // Get header height to adjust scroll position
+          const header = document.querySelector('.header');
+          const headerHeight = header ? header.offsetHeight : 0;
+          
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script> 
