@@ -218,6 +218,7 @@
         "row_d7mWbN": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/1742265910403.jpg",
             "caption": "",
             "heading": "Firm",
             "text": "<p>This category is for someone who prefers mattresses that are just a bit more firm than those found in American Stores. Mattresses in this category are: <a href=\"/products/jade\" title=\"Jade\">Jade </a>and <a href=\"/products/anna\" title=\"Anna\">Anna</a>.</p>",
@@ -228,6 +229,7 @@
         "row_rVi96j": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/1742265910404.jpg",
             "caption": "",
             "heading": "Extra Firm",
             "text": "<p>The extra firm category include <a href=\"/products/hotstone\" title=\"Hotstone\">Hotstone </a>and <a href=\"/products/ruby\" title=\"Ruby\">Ruby</a>. Most of our customers prefer this level of firmness.</p>",
@@ -238,6 +240,7 @@
         "row_AzFQyH": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/1742265859952.jpg",
             "caption": "",
             "heading": "Extra Firm Plus",
             "text": "<p>This category include <a href=\"/products/coconut\" title=\"Coconut\">Coconut </a>and <a href=\"/products/cocospring\" title=\"CocoSpring\">CocoSpring</a>. Some of our extra firm plus contain coconut fiber, and are comparable in firmness to the wood board beds typically found in China</p>",
