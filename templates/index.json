@@ -149,13 +149,43 @@
         "heading_BTTxF7": {
           "type": "heading",
           "settings": {
+            "heading": "Our Firmness Index",
+            "heading_size": "h1"
+          }
+        },
+        "text_JNBKXA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We understand that people prefer different types of mattresses, Americans generally love soft mattresses providing basic support that embrace their body when sleeping, while Asians usually prefer extra Firm Mattresses that feels like wood board. Because many people from Asia grew up sleeping on beds with solid surfaces, some of them would actually get back pains after sleeping on soft mattresses for an extended period. In order to compare the firmness of different mattresses, we developed our Mattress Firmness Index.</p><p>We define the firmness of mattresses to be from 1 to 10 with 1 represents the feeling of sleeping on a mattress that is composed 100% of foam, and 10 represents the feeling of sleeping on a wood board flat bed. Many of the spring mattresses found in American stores are indexed around 4-5 on this scale, while most of our mattresses are indexed above 7 (measurements are based on feedback from our previous customers).</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BTTxF7",
+        "text_JNBKXA"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_mLKCqm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_imfKd6": {
+          "type": "heading",
+          "settings": {
             "heading": "Our Products Come in 3 Different Flavours",
             "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "heading_BTTxF7"
+        "heading_imfKd6"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -221,6 +251,7 @@
     },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -241,6 +272,7 @@
     "featured_collection",
     "collage",
     "rich_text_gJiggV",
+    "rich_text_mLKCqm",
     "multicolumn",
     "video"
   ]
