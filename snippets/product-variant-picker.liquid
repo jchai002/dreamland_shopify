@@ -14,20 +14,6 @@
     data-section="{{ section.id }}"
     {{ block.shopify_attributes }}
   >
-    {% comment %} Display dimensions and weight for the currently selected variant {% endcomment %}
-    <div class="product-dimensions-container" data-variant-dimensions>
-      <p class="product-dimensions">
-        <span class="dimensions-label">Dimensions: </span>
-        <span class="dimensions-values">
-          <span data-length>{{ product.selected_or_first_available_variant.metafields.custom.length.value | default: 'N/A' }}</span> x 
-          <span data-width>{{ product.selected_or_first_available_variant.metafields.custom.width.value | default: 'N/A' }}</span> x 
-          <span data-height>{{ product.selected_or_first_available_variant.metafields.custom.height.value | default: 'N/A' }}</span>
-        </span>
-        <span class="weight-label">Weight: </span>
-        <span class="weight-value" data-weight>{{ product.selected_or_first_available_variant.weight | weight_with_unit | default: 'N/A' }}</span>
-      </p>
-    </div>
-
     {%- for option in product.options_with_values -%}
       {%- liquid
         assign swatch_count = option.values | map: 'swatch' | compact | size
@@ -107,6 +93,26 @@
       {%- endif -%}
     {%- endfor -%}
 
+    {% comment %} Display dimensions and weight for the currently selected variant {% endcomment %}
+    <div class="product-dimensions-container" data-variant-dimensions>
+      <p class="product-dimensions">
+        <span class="dimensions-values">
+          <span data-length>{{ product.selected_or_first_available_variant.metafields.custom.length.value | default: 'N/A' }}</span> x 
+          <span data-width>{{ product.selected_or_first_available_variant.metafields.custom.width.value | default: 'N/A' }}</span> x 
+          <span data-height>{{ product.selected_or_first_available_variant.metafields.custom.height.value | default: 'N/A' }}</span>
+        </span> /
+        <span class="weight-value" data-weight>
+          {% comment %} Convert weight from grams to pounds on initial load {% endcomment %}
+          {% if product.selected_or_first_available_variant.weight %}
+            {% assign weight_in_lb = product.selected_or_first_available_variant.weight | times: 0.00220462 | round: 2 %}
+            {{ weight_in_lb }} lb
+          {% else %}
+            N/A
+          {% endif %}
+        </span>
+      </p>
+    </div>
+
     <script type="application/json" data-selected-variant>
       {{ product.selected_or_first_available_variant | json }}
     </script>
@@ -151,7 +157,12 @@
             }
             
             if (weightElement && selectedVariant.weight) {
-              weightElement.textContent = (selectedVariant.weight_unit ? selectedVariant.weight + ' ' + selectedVariant.weight_unit : selectedVariant.weight + ' g') || 'N/A';
+              // Always convert weight to pounds regardless of the source unit
+              // Shopify stores weight in grams internally
+              const weightInLb = (selectedVariant.weight * 0.00220462).toFixed(2);
+              weightElement.textContent = weightInLb + ' lb';
+            } else if (weightElement) {
+              weightElement.textContent = 'N/A';
             }
           } catch (e) {
             console.error('Error updating dimensions:', e);
