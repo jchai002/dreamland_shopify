@@ -91,9 +91,9 @@
     <div class="product-dimensions-container" data-variant-dimensions>
       <p class="product-dimensions">
         <span class="dimensions-values">
-          <span data-length>{{ product.selected_or_first_available_variant.metafields.custom.length.value | default: 'N/A' }}</span> x 
-          <span data-width>{{ product.selected_or_first_available_variant.metafields.custom.width.value | default: 'N/A' }}</span> x 
-          <span data-height>{{ product.selected_or_first_available_variant.metafields.custom.height.value | default: 'N/A' }}</span>
+          <span data-length>{{ product.selected_or_first_available_variant.metafields.custom.length.value | default: 'N/A' }}"</span> x 
+          <span data-width>{{ product.selected_or_first_available_variant.metafields.custom.width.value | default: 'N/A' }}"</span> x 
+          <span data-height>{{ product.selected_or_first_available_variant.metafields.custom.height.value | default: 'N/A' }}"</span>
         </span> /
         <span class="weight-value" data-weight>
           {% comment %} Convert weight from grams to pounds on initial load {% endcomment %}
