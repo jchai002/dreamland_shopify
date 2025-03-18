@@ -14,13 +14,33 @@
     data-section="{{ section.id }}"
     {{ block.shopify_attributes }}
   >
+    {% comment %} Display dimensions and weight for the currently selected variant {% endcomment %}
+    <div class="product-dimensions-container" data-variant-dimensions>
+      <p class="product-dimensions">
+        <span class="dimensions-label">Dimensions: </span>
+        <span class="dimensions-values">
+          <span data-length>{{ product.selected_or_first_available_variant.metafields.custom.length.value | default: 'N/A' }}</span> x 
+          <span data-width>{{ product.selected_or_first_available_variant.metafields.custom.width.value | default: 'N/A' }}</span> x 
+          <span data-height>{{ product.selected_or_first_available_variant.metafields.custom.height.value | default: 'N/A' }}</span>
+        </span>
+        <span class="weight-label">Weight: </span>
+        <span class="weight-value" data-weight>{{ product.selected_or_first_available_variant.weight | weight_with_unit | default: 'N/A' }}</span>
+      </p>
+    </div>
+
     {%- for option in product.options_with_values -%}
       {%- liquid
         assign swatch_count = option.values | map: 'swatch' | compact | size
-        assign picker_type = block.settings.picker_type
+        assign picker_type = 'dropdown' 
+        
+        if option.name == 'Size' or option.name == 'size'
+          assign picker_type = 'dropdown'
+        else
+          assign picker_type = block.settings.picker_type
+        endif
 
         if swatch_count > 0 and block.settings.swatch_shape != 'none'
-          if block.settings.picker_type == 'dropdown'
+          if picker_type == 'dropdown'
             assign picker_type = 'swatch_dropdown'
           else
             assign picker_type = 'swatch'
@@ -42,7 +62,7 @@
             picker_type: picker_type
           %}
         </fieldset>
-      {%- elsif picker_type == 'button' -%}
+      {%- elsif picker_type == 'button' and option.name != 'Size' and option.name != 'size' -%}
         <fieldset class="js product-form__input product-form__input--pill">
           <legend class="form__label">{{ option.name }}</legend>
           {% render 'product-variant-options',
@@ -89,6 +109,58 @@
 
     <script type="application/json" data-selected-variant>
       {{ product.selected_or_first_available_variant | json }}
+    </script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const variantSelects = document.querySelectorAll('variant-selects select');
+        variantSelects.forEach(select => {
+          select.addEventListener('change', function() {
+            // Give time for the variant-selects element to update its data
+            setTimeout(updateDimensions, 100);
+          });
+        });
+        
+        function updateDimensions() {
+          const variantSelectsElement = document.querySelector('variant-selects');
+          if (!variantSelectsElement) return;
+          
+          // Get the selected variant data from the data-selected-variant element
+          const selectedVariantJson = variantSelectsElement.querySelector('[data-selected-variant]');
+          if (!selectedVariantJson) return;
+          
+          try {
+            const selectedVariant = JSON.parse(selectedVariantJson.textContent);
+            
+            // Update dimensions and weight
+            const lengthElement = document.querySelector('[data-length]');
+            const widthElement = document.querySelector('[data-width]');
+            const heightElement = document.querySelector('[data-height]');
+            const weightElement = document.querySelector('[data-weight]');
+            
+            if (lengthElement && selectedVariant.metafields && selectedVariant.metafields.custom && selectedVariant.metafields.custom.length) {
+              lengthElement.textContent = selectedVariant.metafields.custom.length.value || 'N/A';
+            }
+            
+            if (widthElement && selectedVariant.metafields && selectedVariant.metafields.custom && selectedVariant.metafields.custom.width) {
+              widthElement.textContent = selectedVariant.metafields.custom.width.value || 'N/A';
+            }
+            
+            if (heightElement && selectedVariant.metafields && selectedVariant.metafields.custom && selectedVariant.metafields.custom.height) {
+              heightElement.textContent = selectedVariant.metafields.custom.height.value || 'N/A';
+            }
+            
+            if (weightElement && selectedVariant.weight) {
+              weightElement.textContent = (selectedVariant.weight_unit ? selectedVariant.weight + ' ' + selectedVariant.weight_unit : selectedVariant.weight + ' g') || 'N/A';
+            }
+          } catch (e) {
+            console.error('Error updating dimensions:', e);
+          }
+        }
+        
+        // Initial update
+        updateDimensions();
+      });
     </script>
   </variant-selects>
 {%- endunless -%}

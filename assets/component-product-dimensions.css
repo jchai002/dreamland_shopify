@@ -1,0 +1,40 @@
+.product-dimensions-container {
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(var(--color-foreground), 0.1);
+  border-radius: 0.4rem;
+  padding: 1.2rem;
+  background-color: rgba(var(--color-foreground), 0.04);
+}
+
+.product-dimensions {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.dimensions-label,
+.weight-label {
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.weight-label {
+  margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 749px) {
+  .product-dimensions-container {
+    padding: 1rem;
+  }
+  
+  .product-dimensions {
+    font-size: 1.3rem;
+  }
+  
+  .weight-label {
+    margin-left: 0;
+    display: block;
+    margin-top: 0.5rem;
+  }
+} 
