@@ -212,6 +212,61 @@
         "padding_bottom": 52
       }
     },
+    "multirow_cbUeEr": {
+      "type": "multirow",
+      "blocks": {
+        "row_d7mWbN": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "Firm",
+            "text": "<p>This category is for someone who prefers mattresses that are just a bit more firm than those found in American Stores. Mattresses in this category are: <a href=\"/products/jade\" title=\"Jade\">Jade </a>and <a href=\"/products/anna\" title=\"Anna\">Anna</a>.</p>",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections"
+          }
+        },
+        "row_rVi96j": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "Extra Firm",
+            "text": "<p>The extra firm category include <a href=\"/products/hotstone\" title=\"Hotstone\">Hotstone </a>and <a href=\"/products/ruby\" title=\"Ruby\">Ruby</a>. Most of our customers prefer this level of firmness.</p>",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections"
+          }
+        },
+        "row_AzFQyH": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "Extra Firm Plus",
+            "text": "<p>This category include <a href=\"/products/coconut\" title=\"Coconut\">Coconut </a>and <a href=\"/products/cocospring\" title=\"CocoSpring\">CocoSpring</a>. Some of our extra firm plus contain coconut fiber, and are comparable in firmness to the wood board beds typically found in China</p>",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "row_d7mWbN",
+        "row_rVi96j",
+        "row_AzFQyH"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -248,6 +303,7 @@
         "column2",
         "column3"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -290,6 +346,7 @@
     "rich_text_gJiggV",
     "custom_liquid_3DUDwh",
     "rich_text_mLKCqm",
+    "multirow_cbUeEr",
     "multicolumn",
     "video"
   ]
