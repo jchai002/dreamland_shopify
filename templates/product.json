@@ -174,8 +174,8 @@
         "column-0": {
           "type": "column",
           "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "<strong>30-Night Adjustment Period & 100-Day Return Window</strong>",
+            "text": "<p>Customer satisfaction is our top priority. We understand that it takes time to adjust to a new mattress, which is why we offer a 30-night adjustment period. We invite you to try your mattress for at least 30 nights. If, after this period, you are still not satisfied, you can initiate a return.</p><p>To facilitate the return process, please donate the mattress to a local charity and provide proof of the donation. Once we receive your proof, we will issue a refund in the form of store credit.</p><p>Your comfort is our priority, and we want to ensure you have the best possible experience with our products.</p>",
             "link_label": "",
             "link": ""
           }
@@ -183,8 +183,8 @@
         "column-1": {
           "type": "column",
           "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "<strong>Our 10-Year Warranty</strong>",
+            "text": "<p>Your Dreamland mattress is built to last, and we stand behind its quality with a <strong>10-year limited warranty</strong>. If you experience any quality issues, such as sagging, within the first year, we will replace your mattress with a brand-new one of the same model and size—you just need to cover the shipping for both the return and the replacement. After the first year, a <strong>depreciation fee</strong> applies based on the original purchase price, increasing by <strong>10% per year</strong> (e.g., 10% in year two, 20% in year three, up to 90% in year ten).</p>",
             "link_label": "",
             "link": ""
           }
