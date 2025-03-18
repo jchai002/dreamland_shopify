@@ -153,6 +153,7 @@
         "image-with-text-1"
       ],
       "settings": {
+        "image": "shopify://shop_images/coconut_beach.jpg",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
