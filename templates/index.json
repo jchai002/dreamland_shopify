@@ -173,6 +173,22 @@
         "padding_bottom": 52
       }
     },
+    "custom_liquid_3DUDwh": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".pretty_table {margin: 20px auto; max-width: 800px;}",
+        ".product-table {width: 100%; border-collapse: collapse;}",
+        ".product-table th,.product-table td {padding: 15px; text-align: left; border-bottom: 1px solid #e0e0e0;}",
+        ".product-table th {background-color: #f8f8f8; font-weight: bold; color: #333;}",
+        ".product-table tr:hover {background-color: #f1f1f1; /* Highlight effect on hover */}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"pretty_table\">\n    <table class=\"product-table\">\n        <thead>\n            <tr>\n                <th>Model</th>\n                <th>Firmness</th>\n                <th>Index</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr>\n                <td>Ruby</td>\n                <td>Extra Firm</td>\n                <td>8.5</td>\n            </tr>\n            <tr>\n                <td>Hotstone</td>\n                <td>Firm</td>\n                <td>9</td>\n            </tr>\n            <tr>\n                <td>Jade</td>\n                <td>Firm</td>\n                <td>7</td>\n            </tr>\n            <tr>\n                <td>Anna</td>\n                <td>Firm</td>\n                <td>8</td>\n            </tr>\n            <tr>\n                <td>Coconut</td>\n                <td>Extra Firm Plus</td>\n                <td>10</td>\n            </tr>\n            <tr>\n                <td>CocoSpring</td>\n                <td>Extra Firm Plus</td>\n                <td>9.5</td>\n            </tr>\n        </tbody>\n    </table>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "rich_text_mLKCqm": {
       "type": "rich-text",
       "blocks": {
@@ -272,6 +288,7 @@
     "featured_collection",
     "collage",
     "rich_text_gJiggV",
+    "custom_liquid_3DUDwh",
     "rich_text_mLKCqm",
     "multicolumn",
     "video"
