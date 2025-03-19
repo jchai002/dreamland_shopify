@@ -1492,3 +1492,30 @@ a.product__text {
     border: none;
   }
 }
+
+/* Price Details Popup customizations */
+.product__price-details {
+  margin-top: 0.5rem;
+}
+
+.price-details-popup-opener {
+  display: inline-block;
+}
+
+.price-details-button {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+  min-height: auto;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.price-details-button:hover {
+  text-decoration-thickness: 0.2rem;
+  opacity: 0.8;
+}
+
+.product__media-list .media > * {
+  overflow: hidden;
+}
