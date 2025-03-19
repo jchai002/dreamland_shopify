@@ -25,24 +25,13 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-            "show_price_details": true,
-            "price_details_text": "Price details",
-            "price_details_content": "<p>We strive to bring you the lowest prices. The strike-through or reference price indicates the Product’s suggested retail price (SRP) and may not have been offered by us or other retailers at that price in the past and may not be offered for sale at that price on any future date.</p><p>Thus, the strike-through price may not necessarily be the prevailing market price, regular retail price, or former price of a Product. In addition, Products may be offered by us or other retailers at the same or lower prices during future promotional events beginning on or after the last day of any advertised promotion. </p>"
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "dropdown",
             "swatch_shape": "circle"
-          }
-        },
-        "popup_CpEiWR": {
-          "type": "popup",
-          "settings": {
-            "text": "Pop-up link text",
-            "page": "price-disclaimer"
           }
         },
         "quantity_selector": {
@@ -108,7 +97,6 @@
         "caption",
         "price",
         "variant_picker",
-        "popup_CpEiWR",
         "quantity_selector",
         "buy_buttons",
         "description",
