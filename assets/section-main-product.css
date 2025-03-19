@@ -279,7 +279,7 @@ a.product__text {
 }
 
 .product .price dl {
-  margin-top: 0.5rem;
+  margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
@@ -319,7 +319,7 @@ a.product__text {
 }
 
 .product__tax {
-  margin-top: -1.4rem;
+  margin-top: 0;
 }
 
 .product--no-media .share-button {
@@ -1495,7 +1495,7 @@ a.product__text {
 
 /* Price Details Popup customizations */
 .product__price-details {
-  margin-top: 0.5rem;
+  margin-top: 0;
 }
 
 .price-details-popup-opener {
