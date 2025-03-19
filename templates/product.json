@@ -85,6 +85,15 @@
             "page": ""
           }
         },
+        "collapsible_tab_6qMLnm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Pricing Details",
+            "icon": "price_tag",
+            "content": "<p>At Dreamland, we strive to provide competitive pricing on all our products. The strike-through or reference price represents the product’s suggested retail price (SRP) and may not necessarily reflect the prevailing market price, a former price, or the regular retail price of the product.</p><p>Prices may fluctuate based on promotions, seasonal sales, or other discounts. Products may also be offered at the same or lower prices in future promotional events. The strike-through price does not guarantee past, present, or future availability of the product at that price.</p>",
+            "page": ""
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -104,6 +113,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
+        "collapsible_tab_6qMLnm",
         "share"
       ],
       "settings": {
