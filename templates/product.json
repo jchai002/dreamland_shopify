@@ -27,6 +27,13 @@
           "type": "price",
           "settings": {}
         },
+        "popup_YanCHy": {
+          "type": "popup",
+          "settings": {
+            "text": "Price details",
+            "page": "price-disclaimer"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -96,6 +103,7 @@
         "title",
         "caption",
         "price",
+        "popup_YanCHy",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
