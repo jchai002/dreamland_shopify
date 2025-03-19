@@ -27,6 +27,13 @@
           "type": "price",
           "settings": {}
         },
+        "price_details_popup_aYRxgp": {
+          "type": "price_details_popup",
+          "settings": {
+            "text": "Price details",
+            "content": "<p>content</p>"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -96,6 +103,7 @@
         "title",
         "caption",
         "price",
+        "price_details_popup_aYRxgp",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
