@@ -31,7 +31,7 @@
           "type": "price_details_popup",
           "settings": {
             "text": "Price details",
-            "content": "<p>content</p>"
+            "content": "<p>price details content</p>"
           }
         },
         "variant_picker": {
