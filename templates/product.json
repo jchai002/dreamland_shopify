@@ -28,7 +28,7 @@
           "settings": {
             "show_price_details": true,
             "price_details_text": "Price details",
-            "price_details_content": "<h1>Price Disclaimer</h1><p>We strive to bring you the lowest prices. The strike-through or reference price indicates the Product’s suggested retail price (SRP) and may not have been offered by us or other retailers at that price in the past and may not be offered for sale at that price on any future date.</p><p>Thus, the strike-through price may not necessarily be the prevailing market price, regular retail price, or former price of a Product. In addition, Products may be offered by us or other retailers at the same or lower prices during future promotional events beginning on or after the last day of any advertised promotion. </p>"
+            "price_details_content": "<p>We strive to bring you the lowest prices. The strike-through or reference price indicates the Product’s suggested retail price (SRP) and may not have been offered by us or other retailers at that price in the past and may not be offered for sale at that price on any future date.</p><p>Thus, the strike-through price may not necessarily be the prevailing market price, regular retail price, or former price of a Product. In addition, Products may be offered by us or other retailers at the same or lower prices during future promotional events beginning on or after the last day of any advertised promotion. </p>"
           }
         },
         "variant_picker": {
