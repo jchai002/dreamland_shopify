@@ -9,8 +9,39 @@
  */
 {
   "sections": {
+    "rich_text_XbPqec": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6yhMD7": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Specialize in Firm Mattresses",
+            "heading_size": "h1"
+          }
+        },
+        "text_diNY3y": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All of our mattresses are firmer than those typically found in American stores. We understand that many people from Asian and South Asian backgrounds prefer firmer mattresses, similar to those found in their home countries. Our selection is designed to provide the firm, supportive feel you're accustomed to.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6yhMD7",
+        "text_diNY3y"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -39,6 +70,7 @@
     }
   },
   "order": [
+    "rich_text_XbPqec",
     "banner",
     "product-grid"
   ]
