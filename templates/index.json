@@ -359,9 +359,9 @@
         "button_RE8pVY": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "(510)364-5825",
             "button_link": "",
-            "button_style_secondary": false,
+            "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
