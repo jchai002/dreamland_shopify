@@ -158,7 +158,7 @@
         "image-with-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>At Dreamland, we believe in better sleep for a better world. That’s why all of our mattresses are made from <strong>ethically sourced, pollution-free materials</strong>, ensuring comfort without compromise. Rest easy knowing your mattress supports both your well-being and the planet.</p>",
+            "text": "<p>At Dreamland, we believe in better sleep for a better world. That’s why all of our mattresses are made from <strong>ethically sourced materials</strong>, ensuring comfort without compromise. Rest easy knowing your mattress supports both your well-being and the planet.</p>",
             "text_style": "body"
           }
         }
