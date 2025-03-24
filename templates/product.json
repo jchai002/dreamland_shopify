@@ -132,6 +132,19 @@
         "padding_bottom": 12
       }
     },
+    "page_gCxJmQ": {
+      "type": "page",
+      "custom_css": [
+        "h2 {text-align: center;}"
+      ],
+      "settings": {
+        "page": "our-10-year-warranty",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image-with-text": {
       "type": "image-with-text",
       "blocks": {
@@ -170,49 +183,6 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>30-Night Adjustment Period & 100-Day Return Window</strong>",
-            "text": "<p>Customer satisfaction is our top priority. We understand that it takes time to adjust to a new mattress, which is why we offer a 30-night adjustment period. We invite you to try your mattress for at least 30 nights. If, after this period, you are still not satisfied, you can initiate a return.</p><p>To facilitate the return process, please donate the mattress to a local charity and provide proof of the donation. Once we receive your proof, we will issue a refund in the form of store credit.</p><p>Your comfort is our priority, and we want to ensure you have the best possible experience with our products.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Our 10-Year Warranty</strong>",
-            "text": "<p>Your Dreamland mattress is built to last, and we stand behind its quality with a <strong>10-year limited warranty</strong>. If you experience any quality issues, such as sagging, within the first year, we will replace your mattress with a brand-new one of the same model and size—you just need to cover the shipping for both the return and the replacement. After the first year, a <strong>depreciation fee</strong> applies based on the original purchase price, increasing by <strong>10% per year</strong> (e.g., 10% in year two, 20% in year three, up to 90% in year ten).</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column-0",
-        "column-1"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -234,8 +204,8 @@
   },
   "order": [
     "main",
+    "page_gCxJmQ",
     "image-with-text",
-    "multicolumn",
     "related-products"
   ]
 }
